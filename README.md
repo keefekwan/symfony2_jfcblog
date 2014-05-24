@@ -1,6 +1,6 @@
 JFC Blog
 ========================
-Practice creating a blog using Symfony2 using the following:
+Symfony2 practice creating a blog using the following:
 
 Multiple bundles:
 - ModelBundle (entities, repositories and data fixtures)
