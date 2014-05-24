@@ -16,6 +16,7 @@ Overall:
 - Consists of a simple generic css template
 - Contains posts, author and comments
 - Sidebar for latest posts
+- Services for author and post
 - Setup for translations
 
 
