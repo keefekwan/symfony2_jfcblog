@@ -1,0 +1,19 @@
+{# src/JFC/CoreBundle/Resources/views/Author/show.html.twig #}
+{% extends 'JFCCoreBundle::layout.html.twig' %}
+
+{% block title %} {{ 'post.by.author' | trans({ '%name%': author.name }) }}{% endblock %}
+
+{% block sidebar %}
+    <aside>
+        <h3>{{ 'post.by' | trans }}</h3>
+
+        <p>{{ author.name }}</p>
+
+    </aside>
+{% endblock %}
+
+{% block section %}
+    {% for post in posts %}
+        {{ include('JFCCoreBundle:Post:_post.html.twig', { post: post }) }}
+    {% endfor %}
+{% endblock %}

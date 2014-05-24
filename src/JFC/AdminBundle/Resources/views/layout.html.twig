@@ -1,0 +1,31 @@
+{# src/JFC/AdminBundle/Resources/views/layout.html.twig #}
+{% extends '::base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/jfcadmin/css/main.css') }}">
+{% endblock %}
+
+{% block body %}
+    <header>
+        <p>Symfony2 Blog - Admin</p>
+            <nav>
+                <ul>
+                    <li><a href="{{ path('jfc_admin_post_index') }}">Posts</a></li>
+                    <li><a href="{{ path('jfc_admin_author_index') }}">Authors</a></li>
+                    {% if app.user %}
+                        <li><a href="{{ path('jfc_admin_security_logout') }}">Logout</a></li>
+                    {% endif %}
+                </ul>
+            </nav>
+    </header>
+
+    <section>
+        {% for type, messages in app.session.flashbag.all() %}
+            {% for messagge in message %}
+                <p class="session-message">{{ message }}</p>
+            {% endfor %}
+        {% endfor %}
+
+        {% block section %}{% endblock %}
+    </section>
+{% endblock %}

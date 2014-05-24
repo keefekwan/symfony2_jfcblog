@@ -1,0 +1,21 @@
+{# src/JFC/CoreBundle/Resources/views/Page/index.html.twig #}
+{% extends 'JFCCoreBundle::layout.html.twig' %}
+
+{% block title %}{{ 'post.plural' | trans }}{% endblock %}
+
+{% block sidebar %}
+    <aside>
+        <h3>{{ 'post.latest' | trans }}</h3>
+
+        {% for post in latestPosts %}
+            <p><a href="{{ path('jfc_core_post_show', { slug: post.slug }) }}">{{ post.title }}</a></p>
+        {% endfor %}
+    </aside>
+{% endblock %}
+
+{% block section %}
+    {% for post in posts %}
+        {{ include('JFCCoreBundle:Post:_post.html.twig', { post: post }) }}
+    {% endfor %}
+{% endblock %}
+

@@ -1,0 +1,33 @@
+{# src/JFC/CoreBundle/Resources/views/layout.html.twig #}
+{% extends '::base.html.twig'%}
+
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/jfccore/css/main.css') }}">
+{% endblock %}
+
+{% block body %}
+    <header>
+        <p>Symfony2 Blog</p>
+            <ul>
+                <li><a href="{{ path('jfc_core_post_index') }}">{{ 'home' | trans }}</a></li>
+            </ul>
+    </header>
+
+    {% block sidebar %}
+
+    {% endblock %}
+
+    <section>
+        {% for type, messages in app.session.flashbag.all() %}
+            {% for message in messages %}
+                <p class="session-message">{{ message }}</p>
+            {% endfor %}
+        {% endfor %}
+
+        {% block section %}{% endblock %}
+    </section>
+
+    <footer>
+        <p>{{ 'now' | date('Y')  }} Symfony2 Blog</p>
+    </footer>
+{% endblock %}
