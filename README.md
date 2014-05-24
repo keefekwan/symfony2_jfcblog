@@ -1,3 +1,24 @@
+JFC Blog
+========================
+Practice creating a blog using Symfony2 using the following:
+
+Multiple bundles:
+ModelBundle (entities, repositories and data fixtures)
+CoreBundle (controller, views)
+AdminBundle (Author/Post CRUD operations)
+
+Extra bundles:
+Doctrine DataFixures (for loading dummy data)
+Doctrine Migrations (creating/updating database)
+StofDoctrineExtensionsBundle (for adding slugs)
+
+Overall:
+- Consists of a simple generic css template
+- Contains posts, author and comments
+- Sidebar for latest posts
+- Setup for translations
+
+
 Symfony Standard Edition
 ========================
 
