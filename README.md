@@ -5,7 +5,7 @@ Symfony2 practice creating a blog using the following:
 Multiple bundles:
 - ModelBundle (entities, repositories and data fixtures)
 - CoreBundle (controller, views)
-- AdminBundle (Author/Post CRUD operations)
+- AdminBundle (Author/Post Admin and CRUD operations)
 
 Extra bundles:
 - Doctrine DataFixures (for loading dummy data)
